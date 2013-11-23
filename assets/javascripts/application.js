@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $.ajax("views/pages/about.hbs")
   .success(function(data){
-    template = Handlebars.compile(data);
+    var template = Handlebars.compile(data);
     $("main").html(template());
   })
   .error(function(data){
