@@ -1,0 +1,70 @@
+.tiers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tiers:after {
+  content: "";
+  clear: both;
+}
+
+.tiers input:checked + label {
+  outline: 4px solid #21b4d0;
+}
+
+.type-tier {
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  float: left;
+  height: 170px;
+  position: relative;
+  width: 160px;
+}
+
+.type-tier + .type-tier {
+  margin-left: 25px;
+}
+
+.type-tier label {
+  background: #fff no-repeat center center;
+  bottom: 1px;
+  cursor: pointer;
+  display: block;
+  font-size: 0;
+  left: 1px;
+  position: absolute;
+  right: 1px;
+  text-indent: 100%;
+  top: 1px;
+  white-space: nowrap;
+}
+
+.unranked label {
+  background-image: url('../images/unranked.jpg');
+}
+
+.bronze label {
+  background-image: url('../images/bronze.jpg');
+}
+
+.silver label {
+  background-image: url('../images/prata.jpg');
+}
+
+.gold label {
+  background-image: url('../images/gold.jpg');
+}
+
+.platinum label {
+  background-image: url('../images/platina.jpg');
+}
+
+.diamond label {
+  background-image: url('../images/diamante.jpg');
+}
+
+.challenger label {
+  background-image: url('../images/desafiante.jpg');
+}
+
