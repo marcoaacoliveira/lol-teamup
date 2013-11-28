@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $.ajax("views/pages/about.hbs")
+  $.ajax("views/users/new.hbs")
   .success(function(data){
     var template = Handlebars.compile(data);
     $("main").html(template());
