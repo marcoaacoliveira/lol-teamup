@@ -41,30 +41,30 @@
 }
 
 .unranked label {
-  background-image: url('../images/unranked.jpg');
+  background-image: url('../images/tiers/unranked.png');
 }
 
 .bronze label {
-  background-image: url('../images/bronze.jpg');
+  background-image: url('../images/tiers/bronze.png');
 }
 
 .silver label {
-  background-image: url('../images/prata.jpg');
+  background-image: url('../images/tiers/silver.png');
 }
 
 .gold label {
-  background-image: url('../images/gold.jpg');
+  background-image: url('../images/tiers/gold.png');
 }
 
 .platinum label {
-  background-image: url('../images/platina.jpg');
+  background-image: url('../images/tiers/platinum.png');
 }
 
 .diamond label {
-  background-image: url('../images/diamante.jpg');
+  background-image: url('../images/tiers/diamond.png');
 }
 
 .challenger label {
-  background-image: url('../images/desafiante.jpg');
+  background-image: url('../images/tiers/challenger.png');
 }
 
