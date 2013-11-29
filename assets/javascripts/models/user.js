@@ -7,4 +7,8 @@ var User = LoL.Sivir.extend(function(attributes) {
     password: ""    
   };
   this.setAttributes(defaults, attributes);
+}).statics(
+  LoL.Sivir.statics()
+).methods({
+
 });
