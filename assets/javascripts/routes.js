@@ -9,6 +9,7 @@ var Routes = {
     var template = Handlebars.compile(data);
     mainContainer.html(template());    
   },
+<<<<<<< HEAD
   "users/new": function(data) {
     // Initialize template
     var template = Handlebars.compile(data);
@@ -81,4 +82,11 @@ var Routes = {
     })
   },
   rootUrl: "users/dashboard"
+=======
+  "teams/new_team": function(data){
+  	var template = Handlebars.compile(data);
+  	mainContainer.html(template());
+  },
+  rootUrl: "teams/new_team"
+>>>>>>> Adicionando a route para new_teams
 }
