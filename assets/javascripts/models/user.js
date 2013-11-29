@@ -6,8 +6,12 @@ var User = LoL.Sivir.extend(function(attributes) {
     email: "",
     password: "",
     summoner: "",
-    position: "",
+    role: "",
     tier: ""
   };
   this.setAttributes(defaults, attributes);
+}).statics(
+  LoL.Sivir.statics()
+).methods({
+
 });

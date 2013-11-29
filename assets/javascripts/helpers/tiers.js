@@ -1,37 +1,38 @@
-var Tiers = [{
+var Tiers = [
+{
   name: "unranked",
-  alternateName: "Unranked",
+  alternativeName: "Unranked",
   current: "current",
   description: "TODO: Descrição para sem classificação."
 },
 {
   name: "bronze",
-  alternateName: "Bronze",
+  alternativeName: "Bronze",
   description: "TODO: Descrição para Bronze."
 },
 {
   name: "silver",
-  alternateName: "Prata",
+  alternativeName: "Prata",
   description: "TODO: Descrição para Prata."
 },
 {
   name: "gold",
-  alternateName: "Ouro",
+  alternativeName: "Ouro",
   description: "TODO: Descrição para Ouro."
 },
 {
   name: "platinum",
-  alternateName: "Platina",
+  alternativeName: "Platina",
   description: "TODO: Descrição para Platina."
 },
 {
   name: "diamond",
-  alternateName: "Diamante",
+  alternativeName: "Diamante",
   description: "TODO: Descrição para Diamante."
 },
 {
   name: "challenger",
-  alternateName: "Desafiante",
+  alternativeName: "Desafiante",
   description: "TODO: Descrição para Desafiante."
 }
 ];
