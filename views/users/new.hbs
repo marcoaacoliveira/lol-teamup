@@ -7,124 +7,68 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <form action="#" role="form">
-        <div class="form-group">
-          <label for="username">Nome</label>
-          <input type="text" class="form-control" id="name" name="name" placeholder="Twisted Fate">
+    <form action="#" role="form">
+      <div class="row">
+        <div class="col-md-4 col-md-offset-1">
+          <div class="form-group">
+            <label for="username">Nome</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Twisted Fate">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="twisted.fate@lol.com.br">
+          </div>
+          <div class="form-group">
+            <label for="password">Senha</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Dados Viciados">
+          </div>
+          <div class="form-group">
+            <label for="summoner">Nome de Invocador</label>
+            <input type="text" class="form-control" id="summoner" name="summoner" placeholder="Secret">
+          </div>
+          <div class="form-group">
+            <label for="role">Posição</label>
+            <input type="text" class="form-control" id="role" name="role" placeholder="Topo">
+          </div>
         </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" class="form-control" id="email" name="name" placeholder="twisted.fate@lol.com.br">
-        </div>
-        <div class="form-group">
-          <label for="password">Senha</label>
-          <input type="password" class="form-control" id="password" name="password" placeholder="Dados Viciados">
-        </div>
-        <div class="form-group">
-          <label for="summoner">Nome de Invocador</label>
-          <input type="text" class="form-control" id="summoner" name="summoner" placeholder="Secret">
-        </div>
-        <div class="form-group">
-          <label for="role">Posição</label>
-          <input type="text" class="form-control" id="role" name="role" placeholder="Topo">
-        </div>
-        <div class="form-group">
-          <label for="tier">Liga</label>
-          <div class="row tiers">
-            <input type="hidden" id="tier" name="tier" value="unranked">
-            <div class="col-md-3 chevron-left">
-              <i class="fa fa-chevron-left fa-4x"></i>
-            </div>
-            <div class="col-xs-3 col-md-6 tier-list">
-              <div class="tier current">
-                <div class="thumbnail">
-                  <img src="assets/images/tiers/unranked.png" alt="Unranked">
-                  <div class="caption">
-                    <h3>Unranked</h3>
-                    <p>
-                      TODO: Descrição para sem classificação.
-                    </p>
-                  </div>
-                </div>                
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="tier">Liga</label>
+            <div class="row tiers">
+              <input type="hidden" id="tier" name="tier" value="unranked">
+              <div class="col-xs-1 col-md-3 chevron-left">
+                <i class="fa fa-chevron-left fa-4x"></i>
               </div>
-              <div class="tier">
-                <div class="thumbnail">
-                  <img src="assets/images/tiers/bronze.png" alt="Bronze">
-                  <div class="caption">
-                    <h3>Bronze</h3>
-                    <p>
-                      TODO: Descrição para bronze.
-                    </p>
+              <div class="col-xs-8 col-md-6 tier-list">
+                {{#each tiers}}
+                <div class="tier {{current}}" data-value="{{name}}">
+                  <div class="thumbnail">
+                    <img src="assets/images/tiers/{{name}}.png" alt="{{alternateName}}">
+                    <div class="caption">
+                      <h3>{{alternateName}}</h3>
+                      <p>
+                        {{description}}
+                      </p>
+                    </div>
                   </div>
                 </div>
+                {{/each}}
               </div>
-              <div class="tier">
-                <div class="thumbnail">
-                  <img src="assets/images/tiers/silver.png" alt="Prata">
-                  <div class="caption">
-                    <h3>Prata</h3>
-                    <p>
-                      TODO: Descrição para prata.
-                    </p>
-                  </div>
-                </div>
+              <div class="col-xs-1 col-md-3 chevron-right">
+                <i class="fa fa-chevron-right fa-4x"></i>
               </div>
-              <div class="tier">
-                <div class="thumbnail">
-                  <img src="assets/images/tiers/gold.png" alt="Ouro">
-                  <div class="caption">
-                    <h3>Ouro</h3>
-                    <p>
-                      TODO: Descrição para ouro.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="tier">
-                <div class="thumbnail">
-                  <img src="assets/images/tiers/platinum.png" alt="Platina">
-                  <div class="caption">
-                    <h3>Platina</h3>
-                    <p>
-                      TODO: Descrição para platina.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="tier">
-                <div class="thumbnail">
-                  <img src="assets/images/tiers/diamond.png" alt="Diamante">
-                  <div class="caption">
-                    <h3>Diamante</h3>
-                    <p>
-                      TODO: Descrição para diamante.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="tier">
-                <div class="thumbnail">
-                  <img src="assets/images/tiers/challenger.png" alt="Desafiante">
-                  <div class="caption">
-                    <h3>Desafiante</h3>
-                    <p>
-                      TODO: Descrição para desafiante.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 chevron-right">
-              <i class="fa fa-chevron-right fa-4x"></i>
             </div>
           </div>
         </div>
-        <div class="form-group">
-          <button type="submit" class="btn btn-success">Inscrever-se</button>
-          <a href="#" data-href="rootUrl">Retornar</a>
+      </div>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="form-group">
+            <button type="submit" class="btn btn-success">Inscrever-se</button>
+            <a href="#" data-href="rootUrl">Retornar</a>
+          </div>
         </div>
-      </form>
-    </div>
+      </div>
+    </form>
   </div>
 </div>
