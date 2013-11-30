@@ -148,6 +148,6 @@ var Routes = {
       team.save();
     })
   },
-  rootUrl: "teams/new_team"
+  rootUrl: "users/dashboard"
 
 }
