@@ -1,4 +1,4 @@
-var User = LoL.Sivir.extend(function(attributes) {
+var Team = LoL.Sivir.extend(function(attributes) {
   this.shelf = "teams";
   
   var defaults = {
