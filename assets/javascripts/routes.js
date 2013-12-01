@@ -80,5 +80,9 @@ var Routes = {
       user.save();
     })
   },
-  rootUrl: "users/dashboard"
+  "sessions/login" : function(data){
+    var template = Handlebars.compile(data);
+    mainContainer.html(template());
+  },
+  rootUrl: "sessions/login"
 }
