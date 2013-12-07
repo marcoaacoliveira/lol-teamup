@@ -146,7 +146,9 @@ var Routes = {
       e.preventDefault();
       var team = new Team($(this).serializeJSON());
       team.save();
-    })
+      window.alert("Time cadastro com sucesso!");
+      loadRootAction("users/dashboard");
+    });
   },
   rootUrl: "users/dashboard"
 
