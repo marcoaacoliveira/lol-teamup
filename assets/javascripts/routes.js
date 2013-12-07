@@ -83,6 +83,16 @@ var Routes = {
   "sessions/login" : function(data){
     var template = Handlebars.compile(data);
     mainContainer.html(template());
+    var login = $("#login");
+
+    login.find('form').on('submit', function(e) {
+      e.preventDefault();
+      var logged = new Session($(this).serializeJSON());
+      logged.save();
+    })
   },
+
+
+
   rootUrl: "sessions/login"
 }
