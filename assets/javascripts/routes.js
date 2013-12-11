@@ -26,41 +26,6 @@ var Routes = {
 
     $(".chosen-select").chosen();
 
-    function move(e) {
-      e.data.selector.off('click');
-      var tiers = $(e.target).closest('.tiers');
-      var currentTier = tiers.find(".tier.current");
-      var next;
-      if (e.data.direction === 'next') {
-        next = currentTier.next();
-      } else if (e.data.direction === 'prev') {
-        next = currentTier.prev();
-      }
-      if (!next.length > 0) {
-        if (e.data.direction === 'next') {
-          next = tiers.find('.tier').first();
-        } else if (e.data.direction === 'prev') {
-          next = tiers.find('.tier').last();
-        }
-      }
-      currentTier.removeClass('current');
-      next.addClass('current');
-
-      $("#tier").val(next.data('value'));
-
-      var directions;
-      if (e.data.direction === 'next') {
-        directions = { currentTo: 'left', nextFrom: 'right' };
-      } else if (e.data.direction === 'prev') {
-        directions = { currentTo: 'right', nextFrom: 'left' };
-      }
-      currentTier.toggle('slide', { direction: directions.currentTo }, 350, function() {
-        next.toggle('slide', { direction: directions.nextFrom }, 350, function(){
-          e.data.selector.on('click', { direction: e.data.direction, selector: e.data.selector }, move);
-        });
-      });
-    }
-
     // Attaches events
     newUser.find('.chevron-right').on(
       'click', 
@@ -93,41 +58,6 @@ var Routes = {
     });
 
     $(".chosen-select").chosen();
-
-    function move(e) {
-      e.data.selector.off('click');
-      var tiers = $(e.target).closest('.tiers');
-      var currentTier = tiers.find(".tier.current");
-      var next;
-      if (e.data.direction === 'next') {
-        next = currentTier.next();
-      } else if (e.data.direction === 'prev') {
-        next = currentTier.prev();
-      }
-      if (!next.length > 0) {
-        if (e.data.direction === 'next') {
-          next = tiers.find('.tier').first();
-        } else if (e.data.direction === 'prev') {
-          next = tiers.find('.tier').last();
-        }
-      }
-      currentTier.removeClass('current');
-      next.addClass('current');
-
-      $("#tier").val(next.data('value'));
-
-      var directions;
-      if (e.data.direction === 'next') {
-        directions = { currentTo: 'left', nextFrom: 'right' };
-      } else if (e.data.direction === 'prev') {
-        directions = { currentTo: 'right', nextFrom: 'left' };
-      }
-      currentTier.toggle('slide', { direction: directions.currentTo }, 350, function() {
-        next.toggle('slide', { direction: directions.nextFrom }, 350, function(){
-          e.data.selector.on('click', { direction: e.data.direction, selector: e.data.selector }, move);
-        });
-      });
-    }
 
     // Attaches events
     newTeam.find('.chevron-right').on(
