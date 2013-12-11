@@ -7,6 +7,12 @@ body {
   padding: 70px 0 0 0;
 }
 
+.tiers .chevron-left, .tiers .chevron-right {
+  padding-top: 81px;
+  text-align: center;
+}
+
+
 #wrap {
   min-height:100%;
   height: auto !important;
